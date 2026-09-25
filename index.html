@@ -283,6 +283,24 @@
 
 <script src="js/script.js"></script>
 
+  <script>
+function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle("active");
+}
+
+function selectFood(foodName) {
+    document.getElementById("message").value =
+        "Hello! I would like to order " + foodName;
+
+    document.getElementById("successMessage").textContent =
+        foodName + " selected! Please complete your details.";
+
+    document.getElementById("successMessage")
+        .classList.add("success-visible");
+}
+  </script>
+
 </body>
 
 </html>
