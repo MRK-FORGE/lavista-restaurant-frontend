@@ -1,3 +1,4 @@
+console.log("LAVISTA SCRIPT UPDATED");
 function toggleMenu() {
 
     const navLinks = document.getElementById("navLinks");
