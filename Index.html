@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LaVista Restaurant</title>
+  
+    <meta name="description" content="LaVista Restaurant offers delicious food, beautiful atmosphere, and unforgettable dining experiences.">
+
+    <meta name="robots" content="index, follow">
+  
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav>
+
+    <div class="logo">
+        LAVISTA
+    </div>
+
+    <button class="menu-btn" aria-label="Open navigation menu" onclick="toggleMenu()">
+    ☰
+    </button>
+
+    <div class="nav-links" id="navLinks">
+
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
+
+    </div>
+
+</nav>
+
+  
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="hero-small">
+            WELCOME TO LAVISTA
+        </p>
+
+        <h1>
+            Taste the
+            <span>Difference</span>
+        </h1>
+
+        <p class="hero-text">
+            Delicious food, beautiful atmosphere,
+            and unforgettable moments.
+        </p>
+
+        <a href="#menu" class="button">
+            View Our Menu
+        </a>
+
+    </div>
+
+  </section>
+
+  
+  <section class="about" id="about">
+
+    <div class="about-content">
+
+        <p class="section-small">
+            ABOUT LAVISTA
+        </p>
+
+        <h2>
+            More Than Just
+            <span>A Restaurant</span>
+        </h2>
+
+        <p>
+            At LaVista, we believe great food brings people together.
+            Our kitchen combines fresh ingredients, beautiful flavors,
+            and a warm atmosphere to create memorable dining experiences.
+        </p>
+
+        <a href="#menu" class="button">
+            Explore Our Menu
+        </a>
+
+    </div>
+
+  </section>
+
+  
+  <section class="menu" id="menu">
+
+    <div class="section-title">
+
+        <p>OUR MENU</p>
+
+        <h2>
+            Popular <span>Dishes</span>
+        </h2>
+
+    </div>
+
+    <div class="menu-grid">
+
+        <div class="menu-card">
+
+            <div class="food-image">
+            <img src="images/Burger.jpg" alt="Classic Burger">
+            </div>
+
+            <h3>Classic Burger</h3>
+
+            <p>
+                Juicy beef, fresh vegetables and our special sauce.
+            </p>
+
+            <strong>$12</strong>
+            <a href="#contact" class="order-button" onclick="selectFood('Classic Burger')">
+              Order Burger        
+            </a>
+
+        </div>
+
+
+        <div class="menu-card">
+
+            <div class="food-image">
+            <img src="images/pizza.jpg" alt="Italian Pizza">
+            </div>
+
+            <h3>Italian Pizza</h3>
+
+            <p>
+                Freshly baked pizza with premium cheese and toppings.
+            </p>
+
+            <strong>$15</strong>
+            <a href="#contact" class="order-button" onclick="selectFood('Italian Pizza')">
+             Order Pizza
+            </a>
+
+        </div>
+
+
+        <div class="menu-card">
+
+            <div class="food-image">
+    <img src="images/Pasta.jpg" alt="Creamy Pasta">
+</div>
+
+            <h3>Creamy Pasta</h3>
+
+            <p>
+                Delicious creamy pasta prepared with fresh ingredients.
+            </p>
+
+            <strong>$13</strong>
+            <a href="#contact" class="order-button" onclick="selectFood('Creamy Pasta')">
+             Order Pasta
+             </a>
+
+        </div>
+
+    </div>
+
+  </section>
+
+  <section class="contact" id="contact">
+
+    <div class="section-title">
+
+        <p>CONTACT US</p>
+
+        <h2>
+            Make a <span>Reservation</span>
+        </h2>
+
+    </div>
+
+    <div class="contact-info">
+
+    <div class="contact-item">
+        <span>📞</span>
+        <a href="tel:+96541145132">+965 41145132</a>
+    </div>
+
+    <div class="contact-item">
+        <span>📧</span>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mdrejaulkarim01716813329@gmail.com" target="_blank">
+    mdrejaulkarim01716813329@gmail.com
+</a>
+    </div>
+
+    <div class="contact-item">
+        <span>📍</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Kuwait+City+Kuwait" target="_blank">
+    Kuwait City, Kuwait
+</a>
+    </div>
+
+    </div>
+    <a
+    href="https://wa.me/96541145132"
+    target="_blank"
+    class="whatsapp-button"
+>
+    💬 Chat on WhatsApp
+    </a>
+
+    <form class="contact-form" onsubmit="sendMessage(event)">
+
+        <input type="text" id="name" class="form-input" placeholder="Your Name" required>
+
+        <input type="email" id="email" class="form-input" placeholder="Your Email" required>
+
+        <input type="tel" id="phone" class="form-input" placeholder="Your Phone" required>
+
+        <input type="text" id="subject" class="form-input" placeholder="Subject" required>
+
+        <select id="reservationType" class="form-input" required>
+    <option value="" disabled selected>
+        Select Reservation Type
+    </option>
+
+    <option value="Table Reservation">
+        Table Reservation
+    </option>
+
+    <option value="Private Event">
+        Private Event
+    </option>
+
+    <option value="General Inquiry">
+        General Inquiry
+    </option>
+        </select>
+
+        <textarea id="message" class="form-input" placeholder="Your Message"rows="5" required></textarea>
+
+        <button type="submit">
+            Send Message
+        </button>
+
+    </form>
+    <p id="successMessage"></p>
+
+</section>
+
+  <footer>
+
+    <div class="footer-content">
+
+        <h2>LAVISTA</h2>
+
+        <p>
+            Delicious food. Beautiful moments.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="javascript:void(0)">Instagram</a>
+            <a href="javascript:void(0)">Facebook</a>
+            <a href="javascript:void(0)">WhatsApp</a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 LaVista Restaurant. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<button id="backToTop" onclick="scrollToTop()">
+    ↑
+</button>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
