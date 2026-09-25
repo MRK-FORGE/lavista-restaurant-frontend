@@ -1,4 +1,4 @@
-alert("EXTERNAL SCRIPT WORKS");
+
 console.log("LAVISTA SCRIPT UPDATED");
 function toggleMenu() {
 
